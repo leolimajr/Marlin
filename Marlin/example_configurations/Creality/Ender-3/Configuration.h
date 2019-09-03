@@ -726,7 +726,7 @@
 #define BLTOUCH
 #if ENABLED(BLTOUCH)
   #define SERVO0_PIN 27
-  #define BLTOUCH_DELAY 250   // (ms) Enable and increase if needed
+  #define BLTOUCH_DELAY 50   // (ms) Enable and increase if needed
 #endif
 
 /**
@@ -1017,13 +1017,13 @@
 #if ENABLED(AUTO_BED_LEVELING_LINEAR) || ENABLED(AUTO_BED_LEVELING_BILINEAR)
 
   // Set the number of grid points per dimension.
-  #define GRID_MAX_POINTS_X 5
-  #define GRID_MAX_POINTS_Y 5
+  #define GRID_MAX_POINTS_X 4
+  #define GRID_MAX_POINTS_Y 8
 
   // Set the boundaries for probing (where the probe can reach).
   #define LEFT_PROBE_BED_POSITION 41
   #define RIGHT_PROBE_BED_POSITION (X_BED_SIZE - 41)
-  #define FRONT_PROBE_BED_POSITION 10
+  #define FRONT_PROBE_BED_POSITION 30
   #define BACK_PROBE_BED_POSITION (Y_BED_SIZE - 10)
 
   // Probe along the Y axis, advancing X after each column
@@ -1253,8 +1253,8 @@
 // @section temperature
 
 // Preheat Constants
-#define PREHEAT_1_TEMP_HOTEND 185
-#define PREHEAT_1_TEMP_BED     45
+#define PREHEAT_1_TEMP_HOTEND 200
+#define PREHEAT_1_TEMP_BED     50
 #define PREHEAT_1_FAN_SPEED   255 // Value from 0 to 255
 
 #define PREHEAT_2_TEMP_HOTEND 240
